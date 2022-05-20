@@ -19,7 +19,9 @@ fi
 APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 
 BUILD_PARENT_DIR=$(builtin cd "$BUILD_DIR/.."; pwd)
+echo "BUILD_PARENT_DIR $BUILD_PARENT_DIR"
 APP_BASE_PARENT=$(builtin cd "${BUILD_DIR}/${APP_BASE}/.."; pwd)
+echo "APP_BASE_PARENT $APP_BASE_PARENT"
 
 (
     mv "${BUILD_DIR}/${APP_BASE}" "${STAGE}" &&
