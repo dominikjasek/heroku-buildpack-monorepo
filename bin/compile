@@ -25,9 +25,9 @@ echo "APP_BASE_PARENT $APP_BASE_PARENT"
 
 (
     mv "${BUILD_DIR}/${APP_BASE}" "${STAGE}" &&
-    rm -rf "${BUILD_DIR}"/* &&
     ls $APP_BASE_PARENT &&
     mv $APP_BASE_PARENT/* "${BUILD_PARENT_DIR}/" &&
+    rm -rf "${BUILD_DIR}"/* &&
     mv "${STAGE}/$(basename "$APP_BASE")"/* "${BUILD_DIR}"
 )
 
